@@ -1,0 +1,22 @@
+
+
+
+#logo { margin-left:2%; }
+.main-container header { margin-bottom:35px;
+	h1{ padding: 0 2% 12px; font-size:43px; line-height:40px; }
+} 
+
+.selectnav { display: none; }
+#nav { display:block; }
+nav { width:auto; margin-right: 1%; }
+
+
+#main-left-col { float:left; width:30%; margin:0 0 0 2%; }
+#main-right-col { float:right; width:62%; margin:0; padding:0 2% 0 0;
+  p { margin-bottom:15px;}
+  P:nth-child(1n+1) { display:block; }
+}
+
+#slider-mask { width:auto; }
+#success-msg { padding: 3%; }
+

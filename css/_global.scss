@@ -1,0 +1,123 @@
+
+@font-face {
+  font-family: 'Armata';
+  src: url('../fonts/Armata-Regular-webfont.eot'); /* IE9 Compat Modes */
+  src: url('../fonts/Armata-Regular-webfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Armata-Regular-webfont.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Armata-Regular-webfont.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/Armata-Regular-webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
+.clearfix:after { visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0; }
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+
+@mixin vendor-prefix($name, $argument) {
+  -webkit-#{$name}: #{$argument};
+  -ms-#{$name}: #{$argument};
+  -moz-#{$name}: #{$argument};
+  -o-#{$name}: #{$argument};
+  #{$name}: #{$argument};
+}
+
+
+
+body { font:normal 14px/130% 'Armata'; }
+
+#logo { float:left; background:url(../images/sapient-logo.png) no-repeat 0 0; width:68px; height:68px; overflow:hidden; text-indent: -99px; }
+
+#nav { display: none; }
+.selectnav { display: block; }
+
+.header-container { background:#ec3002; height:68px; 
+  @include vendor-prefix( box-shadow, 0 5px 10px #AAAAAA );
+
+  nav { float:right; } 
+  li { float:left; }
+}
+.wrapper {  }
+.main-container { padding-top:30px; 
+  header h1 { padding: 0 4% 12px 4%; margin-bottom:10px; border-bottom:solid 1px #9f9f9f; font-family:'Armata'; font-size:36px; color:#555;  }
+}
+
+#main-right-col { padding:0 4%;
+  p { margin-bottom:15px;}
+  P:nth-child(1n+2) { display:none; }
+}
+
+
+
+/* ---------------- Menu ---------------*/
+#nav { margin-top:27px; 
+  li { margin:0 10px; }
+  a { color:#FFF; font-size:16px; text-decoration:none; }
+  a:hover, a.active { color:#000; }
+ } 
+ nav { width: 60%;
+  .selectnav { float: right; margin: 17px; width: 75%; padding:7px; }
+ }
+
+
+/* --------------- Form Style --------------- */
+#my-from {
+  input[type="submit"] { display:block; margin:10px 0; padding:2%; border:solid 1px #474747; width:100%; text-align:center; font:normal 20px 'Armata'; 
+     @include vendor-prefix( border-radius, 5px ); 
+  }
+}
+#success-msg { display:block; margin:10px 0; padding:4% 3%; border:solid 1px #c2d337; width:94%; background:#f5f8df; font-size:14px; color:#8e9b25;
+     @include vendor-prefix( border-radius, 5px ); 
+     display: none;
+  }
+#form-reg-block { 
+  label { display:none; }
+  input { display:block; margin:10px 0; padding:3%; border:solid 1px #b8b8b8; width:94%;
+     @include vendor-prefix( border-radius, 5px ); 
+  }
+  input.error { background:#feefeb; border:solid 1px #ec3002; color:#a60707;}
+  #error-msg { text-align:right; color:#ba2500; font-size: 11px; display:none; }
+}
+#form-reg-block.no-placeholder label { display:block; clear:both;   }
+#business-unit { 
+    label { display:block; margin:5px 0; }
+    .chk-bx-gp { padding-left:20px; }
+    h2 { font-size:20px; margin:15px 0 10px 0; }
+}
+
+
+
+
+#main-left-col { margin:0 4% 20px 4%; }
+#slider-mask { width:auto; height: 253px; overflow:hidden; position: relative; background:#c2d337; color:#FFF; }
+#slider {
+ width: 606px;
+ position: absolute;
+ li { float:left; width:auto; /* width:202px; */ position:relative; @include vendor-prefix( user-select, none ); cursor: move;; 
+      img { width:100%; }
+      .green-bar{ position:absolute; top:90px; height:25px; width:100%; z-index:2; background:#c2d337; opacity:0.65; filter:alpha(opacity=65);}
+      .slider-text-block { padding:25px 12px 35px 12px; }
+      h2 { color:#FFF; font-weight:bold; font-size:25px; margin-bottom:10px; }
+      p { font-size:11px; margin-bottom:5px; }
+      .hot { color:#FFF; font-weight:bold; }
+  } 
+}
+
+.car-bull {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+  display: inline-block;
+  cursor:pointer;
+}
+.car-bull > .bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  background: #FFF;
+  @include vendor-prefix(border-radius,6px);
+}
+.bullet.current { 
+  background:#000;
+}
+

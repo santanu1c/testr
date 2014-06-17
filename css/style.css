@@ -1,0 +1,372 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
+
+/* ==========================================================================
+   Global & Mobile Styles
+   ========================================================================== */
+@font-face {
+  font-family: 'Armata';
+  src: url("../fonts/Armata-Regular-webfont.eot");
+  /* IE9 Compat Modes */
+  src: url("../fonts/Armata-Regular-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/Armata-Regular-webfont.woff") format("woff"), url("../fonts/Armata-Regular-webfont.ttf") format("truetype"), url("../fonts/Armata-Regular-webfont.svg#svgFontName") format("svg");
+  /* Legacy iOS */ }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+* html .clearfix {
+  zoom: 1; }
+
+/* IE6 */
+*:first-child + html .clearfix {
+  zoom: 1; }
+
+/* IE7 */
+body {
+  font: normal 14px/130% 'Armata'; }
+
+#logo {
+  float: left;
+  background: url(../images/sapient-logo.png) no-repeat 0 0;
+  width: 68px;
+  height: 68px;
+  overflow: hidden;
+  text-indent: -99px; }
+
+#nav {
+  display: none; }
+
+.selectnav {
+  display: block; }
+
+.header-container {
+  background: #ec3002;
+  height: 68px;
+  -webkit-box-shadow: 0 5px 10px #aaaaaa;
+  -ms-box-shadow: 0 5px 10px #aaaaaa;
+  -moz-box-shadow: 0 5px 10px #aaaaaa;
+  -o-box-shadow: 0 5px 10px #aaaaaa;
+  box-shadow: 0 5px 10px #aaaaaa; }
+  .header-container nav {
+    float: right; }
+  .header-container li {
+    float: left; }
+
+.main-container {
+  padding-top: 30px; }
+  .main-container header h1 {
+    padding: 0 4% 12px 4%;
+    margin-bottom: 10px;
+    border-bottom: solid 1px #9f9f9f;
+    font-family: 'Armata';
+    font-size: 36px;
+    color: #555; }
+
+#main-right-col {
+  padding: 0 4%; }
+  #main-right-col p {
+    margin-bottom: 15px; }
+  #main-right-col P:nth-child(1n+2) {
+    display: none; }
+
+/* ---------------- Menu ---------------*/
+#nav {
+  margin-top: 27px; }
+  #nav li {
+    margin: 0 10px; }
+  #nav a {
+    color: #FFF;
+    font-size: 16px;
+    text-decoration: none; }
+  #nav a:hover, #nav a.active {
+    color: #000; }
+
+nav {
+  width: 60%; }
+  nav .selectnav {
+    float: right;
+    margin: 17px;
+    width: 75%;
+    padding: 7px; }
+
+/* --------------- Form Style --------------- */
+#my-from input[type="submit"] {
+  display: block;
+  margin: 10px 0;
+  padding: 2%;
+  border: solid 1px #474747;
+  width: 100%;
+  text-align: center;
+  font: normal 20px 'Armata';
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+
+#success-msg {
+  display: block;
+  margin: 10px 0;
+  padding: 4% 3%;
+  border: solid 1px #c2d337;
+  width: 94%;
+  background: #f5f8df;
+  font-size: 14px;
+  color: #8e9b25;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  display: none; }
+
+#form-reg-block label {
+  display: none; }
+#form-reg-block input {
+  display: block;
+  margin: 10px 0;
+  padding: 3%;
+  border: solid 1px #b8b8b8;
+  width: 94%;
+  -webkit-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+#form-reg-block input.error {
+  background: #feefeb;
+  border: solid 1px #ec3002;
+  color: #a60707; }
+#form-reg-block #error-msg {
+  text-align: right;
+  color: #ba2500;
+  font-size: 11px;
+  display: none; }
+
+#form-reg-block.no-placeholder label {
+  display: block;
+  clear: both; }
+
+#business-unit label {
+  display: block;
+  margin: 5px 0; }
+#business-unit .chk-bx-gp {
+  padding-left: 20px; }
+#business-unit h2 {
+  font-size: 20px;
+  margin: 15px 0 10px 0; }
+
+#main-left-col {
+  margin: 0 4% 20px 4%; }
+
+#slider-mask {
+  width: auto;
+  height: 253px;
+  overflow: hidden;
+  position: relative;
+  background: #c2d337;
+  color: #FFF; }
+
+#slider {
+  width: 606px;
+  position: absolute; }
+  #slider li {
+    float: left;
+    width: auto;
+    /* width:202px; */
+    position: relative;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -moz-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: move; }
+    #slider li img {
+      width: 100%; }
+    #slider li .green-bar {
+      position: absolute;
+      top: 90px;
+      height: 25px;
+      width: 100%;
+      z-index: 2;
+      background: #c2d337;
+      opacity: 0.65;
+      filter: alpha(opacity=65); }
+    #slider li .slider-text-block {
+      padding: 25px 12px 35px 12px; }
+    #slider li h2 {
+      color: #FFF;
+      font-weight: bold;
+      font-size: 25px;
+      margin-bottom: 10px; }
+    #slider li p {
+      font-size: 11px;
+      margin-bottom: 5px; }
+    #slider li .hot {
+      color: #FFF;
+      font-weight: bold; }
+
+.car-bull {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  z-index: 10;
+  display: inline-block;
+  cursor: pointer; }
+
+.car-bull > .bullet {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 10px;
+  background: #FFF;
+  -webkit-border-radius: 6px;
+  -ms-border-radius: 6px;
+  -moz-border-radius: 6px;
+  -o-border-radius: 6px;
+  border-radius: 6px; }
+
+.bullet.current {
+  background: #000; }
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+ /* --------------------------------------------------------------------------
+	   Tablet Styles
+    -------------------------------------------------------------------------- */
+@media only screen and (min-width: 641px) {
+  #logo {
+    margin-left: 2%; }
+
+  .main-container header {
+    margin-bottom: 35px; }
+    .main-container header h1 {
+      padding: 0 2% 12px;
+      font-size: 43px;
+      line-height: 40px; }
+
+  .selectnav {
+    display: none; }
+
+  #nav {
+    display: block; }
+
+  nav {
+    width: auto;
+    margin-right: 1%; }
+
+  #main-left-col {
+    float: left;
+    width: 30%;
+    margin: 0 0 0 2%; }
+
+  #main-right-col {
+    float: right;
+    width: 62%;
+    margin: 0;
+    padding: 0 2% 0 0; }
+    #main-right-col p {
+      margin-bottom: 15px; }
+    #main-right-col P:nth-child(1n+1) {
+      display: block; }
+
+  #slider-mask {
+    width: auto; }
+
+  #success-msg {
+    padding: 3%; } }
+/* ---------------- Tablet Styles End Here -------------------------- */
+ /* --------------------------------------------------------------------------
+	   Desktop Styles
+    -------------------------------------------------------------------------- */
+@media only screen and (min-width: 1024px) {
+  .wrapper {
+    width: 960px;
+    margin: 0 auto; }
+
+  .main-container header h1 {
+    font-size: 63px;
+    line-height: 60px;
+    padding: 0 25px 12px; }
+
+  #main-left-col {
+    width: 202px;
+    margin: 0 0 0 25px; }
+
+  #main-right-col {
+    width: 678px;
+    padding-right: 15px;
+    float: right; }
+
+  #form-reg-block {
+    width: 350px;
+    float: left; }
+
+  #business-unit {
+    width: 302px;
+    float: right; }
+
+  .select-block {
+    padding: 12px;
+    background: #f9f5f5;
+    border: solid 1px #adadad; }
+
+  #my-from input[type="submit"] {
+    width: auto;
+    margin-left: 250px;
+    padding: 3px 10px; }
+
+  #success-msg {
+    padding: 2% 3%; } }
+/* ---------------- Desktop Styles End Here -------------------------- */

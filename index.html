@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Demo Page</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+
+        <link rel="stylesheet" href="css/style.css">
+        <!--[if lt IE 9]>
+			<link rel="stylesheet" href="css/style-ie.css">
+		<![endif]-->
+        <script>        
+         var newtags = ['header','nav','article','section','aside'],
+             tagL = newtags.length,
+             i = 0;
+             for(i; i < tagL; i++){
+				document.createElement(newtags[i]);
+			 }
+        </script>
+
+      
+    </head>
+    <body>
+
+        <div class="header-container">
+            <header class="wrapper clearfix">
+                <h1 id="logo">Sapient Nitro</h1>
+                <nav>
+                    <ul id="nav">
+                        <li><a href="#">Home </a></li>
+                        <li><a href="#">About us</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a class="active" href="#">Contact Us</a></li>
+                    </ul>
+                </nav>
+            </header>
+        </div>
+
+
+        <div class="main-container">
+            <div class="main wrapper clearfix">
+				<header>
+                        <h1>Contact Us</h1>
+                </header>
+                <article id="main-right-col">
+				        
+                    
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed quis aliquet orci. Donec blandit vehicula ante, ut molestie ipsum feugiat ut. Aliquam eu pellentesque lacus, et convallis turpis. Ut dictum congue interdum. Morbi ornare turpis vitae quam aliquet ultricies. Mauris sapien purus, viverra quis faucibus ut, pellentesque id elit. Donec odio lorem, adipiscing eget lectus.</p>
+
+						<p>Donec lacinia lorem sit amet purus varius, a tempus ligula aliquam. Fusce viverra risus at nisi laoreet, ac laoreet libero mollis. Duis ac ipsum sodales, varius tortor quis, posuere dolor. Ut iaculis aliquam orci et luctus. Suspendisse potenti. Integer erat mi, pretium iaculis magna et, suscipit eleifend dui. Nulla porttitor sollicitudin ante, adipiscing molestie ligula tempor in.</p>
+								
+					<form action="#" method="post" id="my-from">
+					    <div id='success-msg'>Form submitted successfully</div>
+					    <div class="clearfix">
+							<section id="form-reg-block">
+								<label for="name">Firstname Lastname</label><input name="name" id="name" class="val-txt" type="text" placeholder="Firstname Lastname" />
+								<label for="pass">Password</label><input name="pass" id="pass" class="val-txt" type="password" placeholder="Password" />
+								<label for="cPass">Confirm Password</label><input name="cPass" id="cPass" class="val-txt" type="password" placeholder="Confirm Password" />
+								<label for="email">Email</label><input name="email" id="email" class="val-txt" type="text" placeholder="Email" />
+								<label for="website">Website</label><input name="website" id="website"  class="val-txt" type="text" placeholder="Website" />
+	              				<div id='error-msg'> &nbsp; </div>
+							</section>
+							<section id="business-unit" class="ckk-bx-gp-wr">
+							    <h2>Business Unit</h2>
+							    <div class="select-block">
+									<label><input name="checkbox1" type="checkbox" class="ckk-bx-sel-all"/> Sapient</label>
+									<div class="clearfix chk-bx-gp">
+										<label><input name="checkbox2" type="checkbox"  /> SapientNitro</label>
+										<label><input name="checkbox3" type="checkbox"  /> Sapient Global Market</label>
+										<label><input name="checkbox4" type="checkbox"  /> Sapient Goverment Services</label>
+										<label><input name="checkbox5" type="checkbox"  /> Sapient (m)PHASIZE</label>
+									</div>
+								</div>
+							</section>
+						</div>
+						<input type="submit" value="Submit">
+					</form>
+
+                </article>
+
+                <aside id="main-left-col">
+                    <div id="slider-mask">
+                    <!--
+	                    <ul id="slider">
+							<li>
+								<img src="images/item-1.png" alt="Careers Image"/>
+								<div class="green-bar"></div>
+								<div class="slider-text-block">
+									<h2>Careers</h2>
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+									<a class="hot" href="#">Hot Jobs</a>
+								</div>
+							</li>
+							<li>
+								<img src="images/item-2.png" alt="Contact Us Image"/>
+								<div class="green-bar"></div>
+								<div class="slider-text-block">
+									<h2>Contact Us</h2>
+									<p>Morbi tincidunt commodo scelerisque.</p>
+									<a class="hot" href="#">Hot Jobs</a>
+								</div>
+							</li>
+							<li>
+								<img src="images/item-3.png" alt="About Us Image"/>
+								<div class="green-bar"></div>
+								<div class="slider-text-block">
+									<h2>About Us</h2>
+									<p>Duis porttitor diam vitae leo elementum accumsan.</p>
+									<a class="hot" href="#">Hot Jobs</a>
+								</div>
+							</li>
+						</ul>
+						-->
+					</div>
+					<div id="main"></div>
+                </aside>
+
+
+            </div> <!-- #main -->
+        </div> <!-- #main-container -->
+
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="JS/jquery.min.js"><\/script>')</script>
+        <script src="JS/handlebars.js"></script>
+	    <script id="simple-template" type="text/x-handlebars-template">
+		      <li>
+		         <img src="{{image}}" alt="{{heading}}" height="103"/>
+		         <div class="green-bar"></div>
+		          <div class="slider-text-block">
+		            <h2>{{heading}}</h2>
+		            <p>{{text}}</p>
+		            <a class="hot" href="#">Hot Jobs</a>
+		          </div>
+		      </li>
+		</script>
+		<script src="JS/wipetouch.js"></script>
+        <script src="JS/main.js"></script>
+    </body>
+</html>

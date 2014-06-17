@@ -1,0 +1,53 @@
+.wrapper {
+  width: 960px;
+  margin: 0 auto; }
+
+.main-container header h1 {
+  font-size: 63px;
+  line-height: 60px;
+  padding: 0 25px 12px; }
+
+#main-left-col {
+  width: 202px;
+  margin: 0 0 0 25px; }
+
+#main-right-col {
+  width: 678px;
+  padding-right: 15px;
+  float: right; }
+
+#form-reg-block {
+  width: 350px;
+  float: left; }
+
+#business-unit {
+  width: 302px;
+  float: right; }
+
+.select-block {
+  padding: 12px;
+  background: #f9f5f5;
+  border: solid 1px #adadad; }
+
+#my-from input[type="submit"] {
+  width: auto;
+  margin-left: 250px;
+  padding: 3px 10px; }
+
+#success-msg {
+  padding: 2% 3%; }
+
+.selectnav {
+  display: none; }
+
+#nav {
+  display: block; }
+
+nav {
+  width: auto;
+  margin-right: 1%; }
+
+.car-bull > .bullet {
+  display: inline-block;
+  *display: inline;
+  zoom: 1; }
